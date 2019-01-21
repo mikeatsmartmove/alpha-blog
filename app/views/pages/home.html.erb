@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="en-uk">
+<!-- just a play with HTML -->
+	<head>
+	<title>Case Studies</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		*{
+			box-sizing: border-box;
+		} 
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		/*style the header*/
+		header {
+			background-color:#fff;
+			padding:10px;
+			text-align:center;
+			font-size:35px;
+			color: green;
+			}
+		/*create two columns that float next to each other*/
+		nav	{
+			float:left;
+			width:30%;
+			height:500px; /*for demo - consider removing*/
+			background:#ccc;
+			padding:20px;
+		}
+		/*style the list inside the menu*/
+		nav ul {
+			list-style-type: none;
+			padding: 0;
+		}
+		article {
+			float: left;
+			padding: 20px;
+			width:70%;
+			background-color: #f4f4f4;
+			height: 500px; /*for demo - consider removing*/
+		}
+		/*clear the floats after the columns*/
+		section:after	{
+			content:"";
+			display:table;
+			clear:both;
+		}
+		/*footer style*/
+		footer	{
+			background-color: #777;
+			padding: 10px;
+			text-align: center;
+			color: white;
+		}
+		/*responsive layout - makes the two columns stack on top of each other instead of next to each other on small screens */
+		@media (max-width: 600px)	{
+			nav, article	{
+				width: 100%;
+				height: auto;
+			}
+		}
+	</style>
+	</head>
+		<body>
+			<h2>Verbilly Case Studies</h2>
+			<p>Verbilly is a new application designed to support teachers to provide better feedback in less time.</p>
+			<p>Teachers and schools are using it in very different ways but it's always good to read some examples</p>
+		<header>
+			<h2>Schools</h2>
+		</header>
+		<section>
+			<nav>
+				<ul>
+					<li><a href="http://bbc.co.uk">BBC</a></li>
+					<li><a href="http://google.com">Google</a></li>
+					<li><a href="http://verbilly.com">Verbilly</a></li>
+				</ul>
+			</nav>
+
+			<article>
+				<h1>Nightingale School</h1>
+				<!--<img src="school in garden" alt="Fire of London" style="width:500px;height:200px;"> -->
+				<%= link_to image_tag('school in garden.jpg'), 'www.smartmoveit.co.uk' %>
+				<p>This primary school, set in the heart of Leeds, started using Verbilly in January 2019.</p>
+				<p>The Headteacher said <q>We have been delighted with the response from the teachers, the parents and the childrens learning outcomes</q></p>
+		</section>
+		<footer>
+			<p>Copyright MB 2019</p>
+		</footer>
+			
+		</body>
+</html>
+
+<%= link_to 'About', about_path %>
